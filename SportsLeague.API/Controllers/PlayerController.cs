@@ -13,16 +13,13 @@ public class PlayerController : ControllerBase
 {
     private readonly IPlayerService _playerService;
     private readonly IMapper _mapper;
-    private readonly ILogger<PlayerController> _logger;
 
     public PlayerController(
         IPlayerService playerService,
-        IMapper mapper,
-        ILogger<PlayerController> logger)
+        IMapper mapper)
     {
         _playerService = playerService;
         _mapper = mapper;
-        _logger = logger;
     }
 
     [HttpGet]
