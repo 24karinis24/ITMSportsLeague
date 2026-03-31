@@ -50,7 +50,7 @@ public class SponsorService : ISponsorService
         {
             _logger.LogWarning("Sponsor with name '{SponsorName}' already exists", sponsor.Name);
             throw new InvalidOperationException(
-                $"Ya existe un equipo con el nombre '{sponsor.Name}'");
+                $"Ya existe un patrocinador con el nombre '{sponsor.Name}'");
         }
 
         // Validación de formato de email
@@ -69,7 +69,7 @@ public class SponsorService : ISponsorService
         {
             _logger.LogWarning("Sponsor with ID {SponsorId} not found for update", id);
             throw new KeyNotFoundException(
-                $"No se encontró el equipo con ID {id}");
+                $"No se encontró el patrocinador con ID {id}");
         }
 
         // Validar nombre único (si cambió)
@@ -79,7 +79,7 @@ public class SponsorService : ISponsorService
             if (exists)
             {
                 throw new InvalidOperationException(
-                    $"Ya existe un equipo con el nombre '{sponsor.Name}'");
+                    $"Ya existe un patrocinador con el nombre '{sponsor.Name}'");
             }
         }
 
@@ -105,7 +105,7 @@ public class SponsorService : ISponsorService
         {
             _logger.LogWarning("Sponsor with ID {SponsorId} not found for deletion", id);
             throw new KeyNotFoundException(
-                $"No se encontró el equipo con ID {id}");
+                $"No se encontró el sponsor con ID {id}");
         }
 
         _logger.LogInformation("Deleting Sponsor with ID: {SponsorId}", id);
