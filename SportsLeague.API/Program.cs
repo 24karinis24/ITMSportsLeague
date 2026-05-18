@@ -39,7 +39,7 @@ builder.Services.AddScoped<ITournamentService, TournamentService>();
 builder.Services.AddScoped<IMatchService, MatchService>();
 builder.Services.AddScoped<IMatchEventService, MatchEventService>();
 builder.Services.AddScoped<MatchValidationHelper>();
-
+builder.Services.AddScoped<IStandingsService, StandingsService>();
 
 
 // ── AutoMapper ──
