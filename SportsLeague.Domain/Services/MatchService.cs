@@ -112,7 +112,7 @@ public class MatchService : IMatchService
             throw new InvalidOperationException(
                 "Solo se pueden editar partidos con estado Scheduled");
 
-        // Mismas validaciones que en Create
+        // Las validaciones de Create
         if (match.HomeTeamId == match.AwayTeamId)
             throw new InvalidOperationException(
                 "El equipo local y visitante deben ser diferentes");
